@@ -40,7 +40,7 @@ while True:
 		print('I don\'t understand input. Try again.')
 
 for f in glob.glob(os.path.join(file_path,file_name)):
-	df = pd.read_excel(f, header=4, skipfooter=3)
+	df = pd.read_excel(f, sheetname='Sheet1', header=4, skipfooter=3)
 	all_data = all_data.append(df,ignore_index=True, sort=False)
 
 master_file = f'{new_file_name}.xlsx'
